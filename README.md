@@ -2,7 +2,7 @@
 
 ## Introduction
 
-One of the projects I am currently working on is the website of a Portland church called Hillcrest. The purpose of this project is to create a responsive one-page React application. Since I am currently the sole developer, I have the unique opportunity to plan out my own process and thus far I have completed several [front end tasks](#front-end-tasks) and [back end tasks](#back-end-tasks). In the near future, I will work on updating Hillcrest's website for the parts of administration who are not technically savvy and want to easily manage what displays in their website.
+One of the projects I am currently working on is the website of a Portland church called Hillcrest. The purpose of this project is to create a responsive one-page React application. Since I am currently the sole developer, I have the unique opportunity to plan out my own process and thus far I have completed several [front end tasks](#front-end-tasks) and [back end tasks](#back-end-tasks). In the near future, I will work on updating Hillcrest's website for those in administration who are not technically savvy and want to easily manage what displays in their website.
 
 ## Front End Tasks
 
@@ -309,7 +309,11 @@ My task was to create a basic front page layout that responds to the size of the
 
 #### Screenshots of the Front Page on a large desktop screen:
 
+#### [1/2]
+
 ![Front Page Desktop](https://github.com/mdarlow/Hillcrest-React/blob/main/Front-Page/Front-Page-Desktop.jpg)
+
+#### [2/2]
 
 ![Front Page Desktop](https://github.com/mdarlow/Hillcrest-React/blob/main/Front-Page/Front-Page-Desktop2.jpg)
 
