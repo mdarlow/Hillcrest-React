@@ -2,8 +2,6 @@
 
 ## Introduction
 
-This is my initial edit of the Hillcrest-React page. Stay tuned for more information, as well as screenshots and code snippets.
-
 One of the projects I am currently working on is the website of a Portland church called Hillcrest. The purpose of this project is to create a responsive one-page React application. Since I am currently the sole developer, I have the unique opportunity to plan out my own process and thus far I have completed several [front end tasks](#front-end-tasks) and [back end tasks](#back-end-tasks). In the near future, I will work on updating Hillcrest's website for the parts of administration who are not technically savvy and want to easily manage what displays in their website.
 
 ## Front End Tasks
@@ -642,23 +640,62 @@ While creating the footer, I wanted to have a sense of balance between the top a
 
 ## Back End Tasks
 
-* [TODO 1](#todo-1)
-* [TODO 2](#todo-2)
+* [Browser Router](#browser-router)
 
-### TODO 1
+### Browser Router
 
-My task...
+My task was to create the back-end of the single page application. I created a Browser Router in order to make the user experience feel smoother than a multi-page application, as there is no need for it to refresh while changing the content of the page.
 
-#### My code:
+#### Index.js code:
 
-    TODO
+    import {
+      BrowserRouter,
+      Routes,
+      Route,
+    } from "react-router-dom";
+    
+    
+    const rootElement = document.getElementById("root");
+    render(
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />}/>
+            <Route path="about" element={<About />} />
+            <Route path="sermons" element={<Sermons />} />
+            <Route path="prayer" element={<Prayer />} />
+            <Route path="sundayschool" element={<SundaySchool />} />
+            <Route path="home" element={<Home />} />
+            <Route
+              path="*"
+              element={
+                <main style={{padding: "0rem"}}>
+                  <p>Under construction. Please come by later!</p>
+                </main>
+              }
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>,
+      rootElement
+    );
 
-### TODO 2
+#### App.js code. The Outlet function renders the child route's element from the above code.
 
-My task...
-
-My code:
-
-    TODO
+    import { Outlet } from "react-router-dom";
+    
+    
+    export default function App() {
+      return (
+        <div className="App">
+          <Navbar />
+          <Title />
+          <div className="AppColumn">
+            <Outlet />
+          </div>
+          <Footer />
+        </div>
+      );
+    }
 
 *Jump to: [Page Top](#hillcrest-react-developer-volunteer), [Front End Tasks](#front-end-tasks), [Back End Tasks](#back-end-tasks)*
